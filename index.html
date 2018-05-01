@@ -23,7 +23,8 @@
 
         <!-- Add your site or application content here -->
         <p>
-            Timer: <span id="timer" style="padding:10px; border:1px solid #000"></span> <span id="info">Select Time Below</span>
+            <span id="timer" style="padding:10px; border:1px solid #000; display:none"></span>
+            <span id="info">Select Time Below</span>
         </p>
         <audio id="player">
             <source src="harp.wav" type="audio/wav" />
@@ -68,6 +69,7 @@
                 $("#info").html("Download Has Finished");
                 $("#spectrum").fadeOut(250);
                 $("#device-list").fadeIn(500);
+                $("#timer").hide();
             }
 
             $(".start-audio").on("click", function(){
@@ -77,7 +79,7 @@
                 audioplayer.play();
                 timer = $(this).attr("data-time");
                 time_down = (timer / 1000);
-                $("#timer").html(secondsTimeSpanToHMS(time_down));
+                $("#timer").html(secondsTimeSpanToHMS(time_down)).show();
 
                 var set_timer = setInterval(function(){
                     time_down--;
