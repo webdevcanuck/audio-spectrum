@@ -7,6 +7,7 @@ window.onload = function() {
     for (var i = 0; i < classname.length; i++) {
         classname[i].addEventListener('click', function() {
         	document.getElementById("device-list").style.display = "none";
+        	document.getElementById("info").innerHTML = "Loading Sound...";
             timer = this.dataset.time;
             mySound = loadSound(this.dataset.wav, playwav);
         });
@@ -97,6 +98,7 @@ function boom(n) {
 function check() {
     document.getElementById("timer").style.display = "none";
     document.getElementById("sketch-holder").style.display = "none";
+   	document.getElementById("info").innerHTML = "Select Time Below";
     document.getElementById("info").style.display = "block";
     document.getElementById("device-list").style.display = "block";
 
