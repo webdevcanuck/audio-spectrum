@@ -23,7 +23,7 @@ function secondsTimeSpanToHMS(s) {
 }
 
 function playwav() {
-    mySound.play();
+    //mySound.play();
     mySound.setVolume(0.1);
     mySound.loop();
     loop();
