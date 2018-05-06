@@ -1,4 +1,4 @@
-var fft, bass, treble, mid, button, mySound, set_timer, timer, x, y, div, p, classname;
+var fft, bass, treble, mid, button, mySound, set_timer, timer, div, p, classname;
 
 window.onload = function() {
 
@@ -23,7 +23,7 @@ function secondsTimeSpanToHMS(s) {
 }
 
 function playwav() {
-    //mySound.play();
+    mySound.play();
     mySound.setVolume(0.1);
     mySound.loop();
     loop();
@@ -60,8 +60,6 @@ function setup() {
     //mySound.loop();
     fft = new p5.FFT();
     frameRate(50);
-    x = windowWidth / 2;
-    y = windowHeight / 2;
 
 }
 
