@@ -14,6 +14,10 @@ window.onload = function() {
     }
 }
 
+function touchStarted() {
+  getAudioContext().resume();
+}
+
 function secondsTimeSpanToHMS(s) {
     var h = Math.floor(s / 3600); //Get whole hours
     s -= h * 3600;
